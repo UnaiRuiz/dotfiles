@@ -1,0 +1,2 @@
+alias gitrm="rm -rf .git"
+
