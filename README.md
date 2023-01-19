@@ -1,2 +1,0 @@
-# Unai Ruiz DotFiles
-
