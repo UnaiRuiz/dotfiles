@@ -2,7 +2,7 @@
 #
 # Shell script to install zsh, oh my zsh, powerlevel10k theme,
 # zsh-autosuggestions plugin, VIM-Plug, fzf and
-# to apply my custom configuration inlcuding my aliases, functions and env vars
+# to apply my custom configuration including my aliases, functions and env vars
 #
 # This script should be run via curl:
 #   bash -c "$(curl -fsSL https://raw.githubusercontent.com/UnaiRuiz/dotfiles/linux/wsl/.extra-dotfiles/install.sh)"
@@ -82,6 +82,17 @@ else
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install --all
   echo "fzf has been successfully installed!"
+fi
+
+# Install lsd
+if command -v lsd > /dev/null; then
+  echo "lsd is already installed"
+else
+  echo "lsd is not installed, installing now..."
+  wget https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
+  sudo dpkg -i lsd_0.23.1_amd64.deb
+  rm lsd_0.23.1_amd64.deb
+  echo "lsd has been successfully installed!"
 fi
 
 # Add my custom dotfiles
