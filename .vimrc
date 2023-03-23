@@ -23,3 +23,5 @@ set shiftwidth=2
 set expandtab
 set mouse=a
 
+imap jj <Esc>
+
